@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sedona_dotpy:
+    image: pyspark/apache-sedona-dotpy
+    working_dir: /app
+    volumes:
+      - /Users/frankjimenez/volt/projects/apache-sedona/dockerised-app/dotpy-version/:/app/
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: tail -F anything
+volumes:
+  my_volume:
+    external: true

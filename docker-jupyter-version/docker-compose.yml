@@ -1,0 +1,11 @@
+version: "3"
+services:
+  sedona_jupyter:
+    image: pyspark/apache-sedona-notebook
+    ports:
+      - 8888:8888
+    volumes:
+      - /Users/joebloggs/apache-sedona/jupyter-version/:/home/jovyan/
+volumes:
+  my_volume:
+    external: true
